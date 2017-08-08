@@ -9,7 +9,7 @@ exports.start = function () {
 	commander
 .version('1.0.0')
 .option('-n, --new [name]', 'Create new Catoolin project')
-.option('-s, --server', 'Serve your Catoolin app')
+.option('-s, --server [port]', 'Serve your Catoolin app')
 .parse(process.argv);
 
 	if (!shell.which('git')) {
@@ -30,7 +30,11 @@ exports.start = function () {
 			console.log(chalk.green('SUCCESS:Your Catoolin app is ready!'));
 		}
 	} else if (commander.server) {
-		shell.exec('php -S localhost:8000');
+		if (commander.server === true) {
+			shell.exec('php -S localhost:8080');
+		} else {
+			shell.exec('php -S localhost:8080');
+		}
 	} else {
 		console.log(chalk.red('ERROR:Please specify command'));
 	}
