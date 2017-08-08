@@ -1,0 +1,16 @@
+{
+  "name": "catoo",
+  "version": "1.0.0",
+  "description": "Console interface for Catoolin",
+  "main": "index.js",
+  "author": "Andrey @ctl",
+  "license": "MIT",
+  "bin": {
+    "catoo": "bin/catoo"
+  },
+  "dependencies": {
+    "chalk": "^2.1.0",
+    "commander": "^2.11.0",
+    "shelljs": "^0.7.8"
+  }
+}
