@@ -1,4 +1,4 @@
 #!/usr/bin/env node
-const cato = require('../index.js');
+const catoo = require('../index.js');
 
-cato.start();
+catoo.start();
