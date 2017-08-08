@@ -33,7 +33,7 @@ exports.start = function () {
 		if (commander.server === true) {
 			shell.exec('php -S localhost:8080');
 		} else {
-			shell.exec('php -S localhost:8080');
+			shell.exec('php -S localhost:'+command.server);
 		}
 	} else {
 		console.log(chalk.red('ERROR:Please specify command'));
